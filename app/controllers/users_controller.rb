@@ -10,6 +10,14 @@ class UsersController < ApplicationController
     end
   end
 
+  def reviews
+    @users = User.all
+
+    respond_to do |format|
+      format.html # reviews.html.erb
+    end
+  end
+
   # GET /users/1
   # GET /users/1.json
   def show

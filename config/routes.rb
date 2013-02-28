@@ -7,6 +7,7 @@ BookReview::Application.routes.draw do
 
   resources :users
 
+  match 'userreviews' => 'users#reviews'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
