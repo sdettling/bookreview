@@ -2,7 +2,8 @@ class User < ActiveRecord::Base
   attr_accessible :age, :email, :first_name, :last_name
 
   def is_teen?(userid)
-  	User.find(userid).age > 12 && < 20
+  	uage = User.find(userid).age
+  	uage > 12 && uage < 20
   end
 
   def has_long_name?(userid)
